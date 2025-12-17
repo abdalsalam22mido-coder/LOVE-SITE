@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ??</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .box {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+      width: 80%;
+      font-size: 16px;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff1e4d;
+    }
+    audio, img {
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box" id="page1">
+  <h2>(??happy chrismes)</h2>
+  <input type="password" id="password" placeholder=" ">
+  <br>
+  <button onclick="checkPassword(1234)">open</button>
+</div>
+
+<div class="box" id="page2" style="display:none;">
+  <h2>(??—”«·Â ·ÌﬂÌ )</h2>
+  <p>(ﬂ· ”‰… Ê«‰ Ì √Ã„· Õ«Ã… Õ’·  ›Ì ÕÌ« Ì° ÊÃÊœﬂ Ã‰»Ì ÂÊ «·√„«‰ Ê«·›—Õ… ??)</p>
+  <button onclick="nextPage(3)">ﬂ„·Ì ??</button>
+</div>
+					         
+<div class="box" id="page3" style="display:none;">
+  <h2>?? √€‰Ì… ⁄·Ï „“«Ãﬂ</h2>
+  <audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+    „ ’›Õﬂ ·« Ìœ⁄„  ‘€Ì· «·’Ê 
+  </audio>
+  <button onclick="nextPage(4)">·”Â ›Ì „›«Ã√… ??</button>
+</div>
+
+<div class="box" id="page4" style="display:none;">
+  <h2>?? ’Ê—… ·ÌﬂÌ</h2>
+  <img src="image.jpg" alt="Love">
+  <p>(ﬂ· «·ﬂ—Ì”„«” Ê«‰ Ì „⁄«Ì« ????)</p>
+</div>
+
+<script>
+  const correctPassword = "1234"; // 
+
+  function checkPassword() {
+    const pass = document.getElementById("password").value;
+    if (pass === correctPassword) {
+      nextPage(2);
+    } else {
+      alert("«·»«”Ê—œ €·ÿ ??");
+    }
+  }
+
+  function nextPage(pageNumber) {
+    for (let i = 1; i <= 4; i++) {
+      document.getElementById("page" + i).style.display = "none";
+    }
+    document.getElementById("page" + pageNumber).style.display = "block";
+  }
+</script>
+
+</body>
+</html>
